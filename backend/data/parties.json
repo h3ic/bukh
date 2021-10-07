@@ -1,0 +1,14 @@
+{
+  "parties": [
+    {
+      "id": 1,
+      "name": "Dacha",
+      "last_viewed": "0"
+    },
+    {
+      "id": 2,
+      "name": "Dr",
+      "last_viewed": null
+    }
+  ]
+}
