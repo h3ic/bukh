@@ -1,0 +1,61 @@
+:root {
+    --font-size: 1rem;
+}
+
+.App {
+    padding-left: 30px;
+    font-size: var(--font-size);
+}
+
+.tables-container {
+    text-align: center;
+    display: inline-block;
+}
+
+.party-table {
+    background: #f1f1f1;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.activity-table {
+    background: antiquewhite;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+.activity-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: var(--font-size);
+}
+
+.activity-button:hover {
+    color: fuchsia;
+}
+
+[type='checkbox'] {
+    margin: 0.5em;
+    transform: scale(1.2);
+}
+
+[type='radio'] {
+    margin: 0.5em;
+    transform: scale(1.2);
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+.check-button {
+    cursor: pointer;
+}
