@@ -6,6 +6,7 @@
 Подойдет для вечеринки, похода или поездки на дачу.
 
 В разработке.
+Использует Flask & React
 
 ---
 App for having expenditures for activities and debts of your friends and colleagues at hand.
@@ -13,3 +14,4 @@ App for having expenditures for activities and debts of your friends and colleag
 Great for parties, hikes and weekend retreats.
 
 In development.
+Uses Flask & React
