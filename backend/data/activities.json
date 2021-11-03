@@ -3,7 +3,6 @@
     {
       "activity_id": 1,
       "activity_name": "son",
-      "activity_expense": 100,
       "users_id": [
         1,
         2,
@@ -16,7 +15,6 @@
     {
       "activity_id": 2,
       "activity_name": "sport",
-      "activity_expense": 70,
       "users_id": [
         1
       ],
@@ -27,7 +25,6 @@
     {
       "activity_id": 3,
       "activity_name": "booze",
-      "activity_expense": 1100,
       "users_id": [
         1,
         2
@@ -40,7 +37,6 @@
     {
       "activity_id": 4,
       "activity_name": "veggies",
-      "activity_expense": 160,
       "users_id": [
         1,
         2,

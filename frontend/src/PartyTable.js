@@ -1,24 +1,27 @@
 import Activities from "./Activities";
-import {UsersRow} from "./TableElements";
+import {PartyUsersRow} from "./TableElements";
 
 
 function PartyTable(props) {
 
     return (
-        <div className="party-table">
+        <div className="table-wrapper">
             <h1>{props.party.name}</h1>
-            <table>
-                <thead>
-                <UsersRow users={props.users}/>
-                </thead>
-                <tbody>
+            <div className="table party-table">
+                <PartyUsersRow users={props.users}
+                               handleAddUser={props.handleAddUser}
+                               handleDeleteUser={props.handleDeleteUser}
+                               handleUsernameChange={props.handleUsernameChange}
+                />
                 <Activities activities={props.activities}
                             items={props.items}
                             users={props.users}
                             handleActivityClick={props.handleActivityClick}
-                            handleCheckboxClick={props.handleParticipationClick}/>
-                </tbody>
-            </table>
+                            handleCheckboxClick={props.handleParticipationClick}
+                            handleAddActivity={props.handleAddActivity}
+                            handleDeleteActivity={props.handleDeleteActivity}
+                />
+            </div>
         </div>
     );
 }

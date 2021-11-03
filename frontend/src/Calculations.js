@@ -13,7 +13,7 @@ export function calcActivityExpenses(activities, items) {
         activityExpenses[activity.activity_id] = 0;
         const activityItems = items.filter(item => activity.items_id.includes(item.item_id));
         for (const item of activityItems) {
-            activityExpenses[activity.activity_id] += item.item_price;
+            activityExpenses[activity.activity_id] += parseFloat(item.item_price);
         }
     }
     return activityExpenses;
@@ -46,7 +46,9 @@ export function calcTotalUsersFinance(users, activities, items, activitiesExpens
             totalUsersFinance['debt'][userID] += partialExpense;
         }
         for (const item of activityItems) {
-            totalUsersFinance['debt'][item.bought_by] -= item.item_price;
+            if (item.bought_by !== null) {
+                totalUsersFinance['debt'][item.bought_by] -= parseFloat(item.item_price);
+            }
         }
     }
 
@@ -62,14 +64,16 @@ export function calcTotalUsersFinance(users, activities, items, activitiesExpens
  * Caclulates users' expenses in ActivityTable
  * Used in TotalRow component
  *
- * @param users
+ * @param usersID
  * @param items
  * @returns {{}}
  */
-export function calcActivityUserExpenses(users, items) {
-    let activityUserExpenses = Object.fromEntries(users.map(user => [user.user_id, 0]));
+export function calcActivityUserExpenses(usersID, items) {
+    let activityUserExpenses = Object.fromEntries(usersID.map(userID => [userID, 0]));
     for (const item of items) {
-        activityUserExpenses[item.bought_by] += item.item_price;
+        if (item.bought_by !== null) {
+            activityUserExpenses[item.bought_by] += parseFloat(item.item_price);
+        }
     }
     return activityUserExpenses;
 }
